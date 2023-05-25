@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.cardContainer, .comicsContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.31rem;
+	width: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+	padding: 0 1rem;
+}
+
+.cardItem {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 248px;
+	height: 448px;
+    padding: 1rem;
+	background: url('../assets/Fondo_niveles.png'), linear-gradient(
+		360deg,
+		#000000 0%,
+		#090c14 0.01%,
+		rgba(23, 26, 32, 0) 36.49%,
+		rgba(39, 44, 52, 0) 114.84%
+	);
+	border: 0.75px solid #3c3c41;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.nameCharacter{
+	display: flex;
+	gap: .5rem;
+}
+
+.cardItem h3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-align: center;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    color: #f0e6d2;
+    width: 80%;
+	
+}
+
+.cardItem .nameCharacter::before{
+	content: url('../assets/Forma_nivel_left.png');
+}
+
+.cardItem .nameCharacter::after{
+	content: url('../assets/Forma_nivel_right.png');
+}
+
+.cardItem .imageContainer {
+	/* width: 80%; */
+	width: 100%;
+	max-width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 3px solid #42331A;
+	border-style: dotted;
+	padding: 1rem;
+	position: relative;
+}
+
+.cardItem .imageContainer::before{
+	content: url('../assets/IlustracionDiamond.png');
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cardItem .imageContainer::after{
+	content: url('../assets/IlustracionDiamond.png');
+	z-index: 1;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+.cardItem img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.cardItem .imageContainer:hover{
+	animation: rotate 2s linear infinite;
+}
+
+.cardItem .imageContainer:hover img{
+	animation: rotateReverse 2s linear infinite;
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+    max-width: 178px;
+	gap: 1rem;
+}
+
+.infoContainer .info {
+	border: 1px solid #5b5a56;
+	border-radius: 5px;
+	width: 100%;
+	padding: .5rem 1rem;
+	display: flex;
+	align-items: center;
+	color: #f0e6d2;
+	background: #1e2328;
+	border-radius: 5px;
+	gap: 1rem;
+}
+
+.infoContainer .info span {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+}
+
+.comicCard{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 248px;
+	height: 448px;
+    padding: 1rem;
+	background: url('../assets/Fondo_niveles.png'), linear-gradient(
+		360deg,
+		#000000 0%,
+		#090c14 0.01%,
+		rgba(23, 26, 32, 0) 36.49%,
+		rgba(39, 44, 52, 0) 114.84%
+	);
+	border: 0.75px solid #3c3c41;
+	border-radius: 5px;
+}
+
+.comicCard h4{
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-align: center;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    color: #f0e6d2;
+}
+
+.comicCard img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateReverse{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(-360deg);
+	}
+}

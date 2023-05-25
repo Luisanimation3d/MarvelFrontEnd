@@ -1,0 +1,79 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 100vh;
+	gap: 2rem;
+	background-image: url('../assets/Fondo.png');
+	background-size: cover;
+	overflow: hidden;
+}
+
+.messageText.loading {
+	background: linear-gradient(
+		180deg,
+		#95753e 0%,
+		#c8a765 32.81%,
+		#d5b36d 68.23%,
+		#9c7d42 100%
+	);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.messageText.error {
+	color: #ff0000;
+}
+
+.paginationContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.paginationContainer button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #C89B3C;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.paginationContainer button svg{
+  width: 20px;
+  height: 20px;
+}
+
+button.disableButton{
+  background: #C89B3C;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationNumbers {
+	font-style: normal;
+	font-weight: 550;
+	font-size: 20px;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.18042px;
+  color: #C89B3C;
+}
+
+.firstSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 3rem;
+}

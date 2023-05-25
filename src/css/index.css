@@ -1,0 +1,19 @@
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #c89b3c #17222b;
+}
+*::-webkit-scrollbar {
+	width: 1px;
+}
+*::-webkit-scrollbar-track {
+	background: #17222b;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #c89b3c;
+	border-radius: 10px;
+	border: 1px solid #c89b3c;
+}
+
+body {
+	overflow: hidden;
+}
