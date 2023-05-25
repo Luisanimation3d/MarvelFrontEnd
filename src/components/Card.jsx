@@ -1,4 +1,4 @@
-import '../css/card.css';
+import '../css/Card.css';
 
 export const Card = ({ name, image, comicsCount, moviesCount, ...props }) => {
 	return (
