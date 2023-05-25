@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useFetch } from './useFetch';
 import { getURL } from './getURL';
-import { Card } from './components/card';
+import { Card } from './components/Card';
 import { CardsContainer } from './components/CardsContainer';
 import { MdArrowBackIosNew, MdOutlineArrowForwardIos } from 'react-icons/md';
 import './css/App.css';
